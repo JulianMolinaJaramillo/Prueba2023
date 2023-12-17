@@ -1,0 +1,283 @@
+/**Codigo Fuente:
+ ** Autor: Julian David Molina Jaramillo
+ ** CC: 1152687834
+ ** Fecha: 16/12/2023
+**/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+
+    font-family: 'Segoe UI','sans-serif';
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #aed7e4;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 50px;
+}
+
+table th {
+    padding: 16px;
+    text-align: center;
+    font-size: .85em;
+}
+
+h1{
+    position: relative;
+    right: 100px;
+    color: #160c6b;  
+}
+
+select{
+    padding: 13px;
+    border: 2px solid #aaa;
+    margin: 10px;
+    margin-right: 50px;
+    align-items: center;
+    border-radius:10px;
+    width: 500px;
+    outline: none;
+    transition: .3s;
+}
+
+.h1-index{
+    position: relative;
+    right: 650px;
+    color: #260485;
+}
+
+.h2-index{
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: #d8d8d8;
+    border-color: #160c6b;
+    color: #020202;
+}
+
+.users-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.users-form form input{
+
+    font-family: 'Segoe UI','sans-serif';
+}
+
+
+.users-form form input[type=text],
+.users-form form input[type=password],
+.users-form form input[type=email]{
+
+    padding: 13px;
+    border: 2px solid #aaa;
+    margin: 10px;
+    margin-right: 50px;
+    align-items: center;
+    border-radius:10px;
+    width: 500px;
+    outline: none;
+    transition: .3s;
+    
+}
+
+.users-form form input[type=text]:focus,
+.users-form form input[type=password]:focus,
+.users-form form input[type=password]:focus{
+
+    border-color: dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+.users-form form input[type=submit]{
+    border: none;
+    padding: 12px;
+    width: 200%;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #160c6b;
+}
+
+.users-form form input[type=submit]:hover{
+    background-color: #0e5a99;
+    color: white;
+}
+
+.users-table table{
+
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.users-table--edit{
+
+    background: #0e5a99;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border-color: black;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+}
+
+.containerdos{
+    
+    position: relative;
+    right: 540px;
+    bottom: 15px;
+    width: 142%;
+    height: 20%;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+}
+
+.contarinerTabla{
+    
+    margin: 81px;
+}
+
+.titulos{
+    position: relative;
+    right: 660px;
+}
+
+.botonActualizar{
+    position: relative;
+    right: 1690px;
+    margin-top: 280px;
+    border-color: dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid #160c6b;
+
+}
+
+.botonVenta{
+    position: relative;
+    top: 70px;
+    right: 700px;
+    border-color: dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid #160c6b;
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #21f360;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.colortabla{
+    background-color: #11c4e4;
+}
+
+.colortabla2{
+    background-color: #800a0a;
+}
+
+.icono{
+    position: relative;
+    height: 50px;
+    top: 20px;
+}
+
